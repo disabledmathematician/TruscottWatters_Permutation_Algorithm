@@ -45,33 +45,53 @@ def perm_three(L, s1, s2, s3):
 # Charles Truscott Watters, 12th of January 2024, one day before my 31st birthday in Byron Bay Australia, where I have lived since 1993 with my father Mark and brother Tai.
 def charles(L):
 	n = 0
-	count = len(L) - 3
+	count = len(L) - 3 - 1
 	nth = L[1]
 	lists = []
+	subsequent_elems = []
+	while count > 0:
+		e = L[count]
+		subsequent_elems.append((e, count))
+		count -= 1
+	print(subsequent_elems)
+	count = 0
 	for x in range(0, len(L)):
 		L[n], L[x] = L[x], L[n]
 		lists.append((L.copy(), x))
-#		print(L)
+		print(L)
 		L[n], L[x] = L[x], L[n]
-#	print(lists)
-	nths = []
-	count = 0
-	for x in lists:
-		for n in range(len(x[0])):
-			if x[0][n] == nth:
-				nths.append((count, n))
-		count += 1
-	Indexes = []
-	for x in lists:
-		print(x[0])
-		for n in range(len(x[0])):
+	for l in lists:
+		for e in subsequent_elems:
+			if e[1] != l[1]:
+				print("Element {}, which is {}, needs to be swapped in {}".format(e[1], e[0], l[0]))
+				count = len(L) - 1
+				while count > 0:
+					if count != l[1]:
+						print("To the {} position".format(count))
+					count -= 1
+#				while count < len(L) - 1 and count != l[1]:
+#					print("To the {} position".format(count))
+#					count += 1
+#			count = 0
+	print(lists)
+#	nths = []
+#	count = 0
+#	for x in lists:
+#		for n in range(len(x[0])):
+#			if x[0][n] == nth:
+#				nths.append((count, n))
+#		count += 1
+#	Indexes = []
+#	for x in lists:
+#		print(x[0])
+#		for n in range(len(x[0])):
 #			print(n)
-			if n != x[1]:
+#			if n != x[1]:
 #				print(x[0][n])
-				Indexes.append(n)
+#				Indexes.append(n)
 #		print(Indexes)
-		perm_three(x[0], Indexes[0], Indexes[1], Indexes[2])
-		Indexes = []
+#		perm_three(x[0], Indexes[0], Indexes[1], Indexes[2])
+#		Indexes = []
 #	print(nths)
 def give_permutation(L):
 	if len(L) == 1:
@@ -85,22 +105,24 @@ def give_permutation(L):
 	else:
 		raise NotImplementedError
 def CharlesTruscott():
-	L1 = ["Jin Jiao", "Yin Bi"]
-	L2 = ["D", "a", "y"]
-	L3 = ["Н", "о", "ч"]
-	L4 = ["Д", "е", "н"]
-	L5 = [2, 4, 8, 1]
-	L6 = ["East", "West", "Schism"]
-	L7 = [1, 0, 5, 4]
-	try:
-		for l in [L1, L2, L3, L4, L5]:
-			print("The permutations of {} are ".format(l))
-			give_permutation(l)
-		for l in [L6, L7]:
-			print("The permutations of {} are ".format(l))
-			give_permutation(l)
-	except NotImplementedError as e:
-		print("Sorry: {}".format(e))
+	L = [1, 2, 3, 4, 5, 6, 7]
+	charles(L)
+#	L1 = ["Jin Jiao", "Yin Bi"]
+#	L2 = ["D", "a", "y"]
+#	L3 = ["Н", "о", "ч"]
+#	L4 = ["Д", "е", "н"]
+#	L5 = [2, 4, 8, 1]
+#	L6 = ["East", "West", "Schism"]
+#	L7 = [1, 0, 5, 4]
+#	try:
+#		for l in [L1, L2, L3, L4, L5]:
+#			print("The permutations of {} are ".format(l))
+#			give_permutation(l)
+#		for l in [L6, L7]:
+#			print("The permutations of {} are ".format(l))
+#			give_permutation(l)
+#	except NotImplementedError as e:
+#		print("Sorry: {}".format(e))
 
 CharlesTruscott()
 """ The permutations of ['Jin Jiao', 'Yin Bi'] are
