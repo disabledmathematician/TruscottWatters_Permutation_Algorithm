@@ -49,9 +49,11 @@ def charles(L):
 	nth = L[1]
 	lists = []
 	subsequent_elems = []
+	subs_elems_L = []
 	while count > 0:
 		e = L[count]
 		subsequent_elems.append((e, count))
+		subs_elems_L.append(e)
 		count -= 1
 	print(subsequent_elems)
 	count = 0
@@ -71,13 +73,20 @@ def charles(L):
 					if count != l[1] and e[1] != l[1]:
 						l[0][e[1]], l[0][count] = l[0][count], l[0][e[1]]
 						print(l[0])
-#						tries.append(L.copy())
+						others = []
+						for n in range(len(l[0])):
+							if l[0][n] in subs_elems_L:
+								others.append(n)
+						others.append(l[1])
+#						others.append(count)
+						tries.append((l[0].copy(), others))
 						l[0][count], l[0][e[1]] = l[0][e[1]], l[0][count]
+						others = []
 #						print("To the {} position".format(count))
 #						print("And then for the permutation of three to be completed ...")
 					count -= 1
 				count = 0
-#	print(tries)
+	print(tries)
 # Thank you Ana Bell, Eric Grimson and John Guttag from MIT for teaching me in 6.001x and 6.002x
 #				while count < len(L) - 1 and count != l[1]:
 #					print("To the {} position".format(count))
