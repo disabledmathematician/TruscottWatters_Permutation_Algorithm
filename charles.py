@@ -40,7 +40,7 @@ def perm_three(L, s1, s2, s3):
 # Most of the inductive case sound. My solution is to swap all n over 3 elements then complete the factorial of three by allowing storage of all n is greater than 3 elements to be swapped to each other place then complete the permutations of three. To be true to infinity it needs to, say, for gamma six, swap the first to all six places, the second element to all five places except where the first is, the third to all four places, and then complete gamma three for all combinatorially plausible, for example in a queue. Inductive definition is that if the factorial of two can be completed, and the factorial of three can, for all swaps, then the factorial swap of infinity can be completed
 # Charles Truscott Watters, 12th of January 2024, one day before my 31st birthday in Byron Bay Australia, where I have lived since 1993 with my father Mark and brother Tai.
 def charles():
-	L = [1, 2, 3, 4]
+	L = ["Fa", "Bi", "Jiao", "Lee"]
 	n = 0
 	count = len(L) - 3
 	nth = L[1]
@@ -81,6 +81,16 @@ charles()
 [[3, 2, 1, 4], [3, 4, 1, 2], [2, 3, 1, 4], [2, 4, 1, 3], [4, 2, 1, 3], [4, 3, 1, 2]]
 [4, 2, 3, 1]
 [[4, 2, 3, 1], [4, 3, 2, 1], [2, 4, 3, 1], [2, 3, 4, 1], [3, 2, 4, 1], [3, 4, 2, 1]]
+
+
+['Fa', 'Bi', 'Jiao', 'Lee']
+[['Fa', 'Bi', 'Jiao', 'Lee'], ['Fa', 'Bi', 'Lee', 'Jiao'], ['Fa', 'Jiao', 'Bi', 'Lee'], ['Fa', 'Jiao', 'Lee', 'Bi'], ['Fa', 'Lee', 'Jiao', 'Bi'], ['Fa', 'Lee', 'Bi', 'Jiao']]
+['Bi', 'Fa', 'Jiao', 'Lee']
+[['Bi', 'Fa', 'Jiao', 'Lee'], ['Bi', 'Fa', 'Lee', 'Jiao'], ['Jiao', 'Fa', 'Bi', 'Lee'], ['Jiao', 'Fa', 'Lee', 'Bi'], ['Lee', 'Fa', 'Jiao', 'Bi'], ['Lee', 'Fa', 'Bi', 'Jiao']]
+['Jiao', 'Bi', 'Fa', 'Lee']
+[['Jiao', 'Bi', 'Fa', 'Lee'], ['Jiao', 'Lee', 'Fa', 'Bi'], ['Bi', 'Jiao', 'Fa', 'Lee'], ['Bi', 'Lee', 'Fa', 'Jiao'], ['Lee', 'Bi', 'Fa', 'Jiao'], ['Lee', 'Jiao', 'Fa', 'Bi']]
+['Lee', 'Bi', 'Jiao', 'Fa']
+[['Lee', 'Bi', 'Jiao', 'Fa'], ['Lee', 'Jiao', 'Bi', 'Fa'], ['Bi', 'Lee', 'Jiao', 'Fa'], ['Bi', 'Jiao', 'Lee', 'Fa'], ['Jiao', 'Bi', 'Lee', 'Fa'], ['Jiao', 'Lee', 'Bi', 'Fa']]
 
 PyDroid on a Galaxy Note 20 5G
 """
