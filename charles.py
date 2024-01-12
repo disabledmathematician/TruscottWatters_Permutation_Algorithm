@@ -91,20 +91,27 @@ def CharlesTruscott():
 	L4 = ["Д", "е", "н"]
 	L5 = [2, 4, 8, 1]
 	L6 = ["East", "West", "Schism"]
-	L7 = ["One O", "Five", "Four", "A.D."]
+	L7 = [1, 0, 5, 4]
 	try:
 		for l in [L1, L2, L3, L4, L5]:
+			print("The permutations of {} are ".format(l))
 			give_permutation(l)
 		for l in [L6, L7]:
+			print("The permutations of {} are ".format(l))
 			give_permutation(l)
 	except NotImplementedError as e:
 		print("Sorry: {}".format(e))
 
 CharlesTruscott()
-""" [['Jin Jiao', 'Yin Bi'], ['Yin Bi', 'Jin Jiao']]
+""" The permutations of ['Jin Jiao', 'Yin Bi'] are
+[['Jin Jiao', 'Yin Bi'], ['Yin Bi', 'Jin Jiao']]
+The permutations of ['D', 'a', 'y'] are
 [['D', 'a', 'y'], ['D', 'y', 'a'], ['a', 'D', 'y'], ['a', 'y', 'D'], ['y', 'a', 'D'], ['y', 'D', 'a']]
+The permutations of ['Н', 'о', 'ч'] are
 [['Н', 'о', 'ч'], ['Н', 'ч', 'о'], ['о', 'Н', 'ч'], ['о', 'ч', 'Н'], ['ч', 'о', 'Н'], ['ч', 'Н', 'о']]
+The permutations of ['Д', 'е', 'н'] are
 [['Д', 'е', 'н'], ['Д', 'н', 'е'], ['е', 'Д', 'н'], ['е', 'н', 'Д'], ['н', 'е', 'Д'], ['н', 'Д', 'е']]
+The permutations of [2, 4, 8, 1] are
 [2, 4, 8, 1]
 [[2, 4, 8, 1], [2, 4, 1, 8], [2, 8, 4, 1], [2, 8, 1, 4], [2, 1, 8, 4], [2, 1, 4, 8]]
 [4, 2, 8, 1]
@@ -113,16 +120,17 @@ CharlesTruscott()
 [[8, 4, 2, 1], [8, 1, 2, 4], [4, 8, 2, 1], [4, 1, 2, 8], [1, 4, 2, 8], [1, 8, 2, 4]]
 [1, 4, 8, 2]
 [[1, 4, 8, 2], [1, 8, 4, 2], [4, 1, 8, 2], [4, 8, 1, 2], [8, 4, 1, 2], [8, 1, 4, 2]]
+The permutations of ['East', 'West', 'Schism'] are
 [['East', 'West', 'Schism'], ['East', 'Schism', 'West'], ['West', 'East', 'Schism'], ['West', 'Schism', 'East'], ['Schism', 'West', 'East'], ['Schism', 'East', 'West']]
-['One O', 'Five', 'Four', 'A.D.']
-[['One O', 'Five', 'Four', 'A.D.'], ['One O', 'Five', 'A.D.', 'Four'], ['One O', 'Four', 'Five', 'A.D.'], ['One O', 'Four', 'A.D.', 'Five'], ['One O', 'A.D.', 'Four', 'Five'], ['One O', 'A.D.', 'Five', 'Four']]
-['Five', 'One O', 'Four', 'A.D.']
-[['Five', 'One O', 'Four', 'A.D.'], ['Five', 'One O', 'A.D.', 'Four'], ['Four', 'One O', 'Five', 'A.D.'], ['Four', 'One O', 'A.D.', 'Five'], ['A.D.', 'One O', 'Four', 'Five'], ['A.D.', 'One O', 'Five', 'Four']]
-['Four', 'Five', 'One O', 'A.D.']
-[['Four', 'Five', 'One O', 'A.D.'], ['Four', 'A.D.', 'One O', 'Five'], ['Five', 'Four', 'One O', 'A.D.'], ['Five', 'A.D.', 'One O', 'Four'], ['A.D.', 'Five', 'One O', 'Four'], ['A.D.', 'Four', 'One O', 'Five']]
-['A.D.', 'Five', 'Four', 'One O']
-[['A.D.', 'Five', 'Four', 'One O'], ['A.D.', 'Four', 'Five', 'One O'], ['Five', 'A.D.', 'Four', 'One O'], ['Five', 'Four', 'A.D.', 'One O'], ['Four', 'Five', 'A.D.', 'One O'], ['Four', 'A.D.', 'Five', 'One O']]
+The permutations of [1, 0, 5, 4] are
+[1, 0, 5, 4]
+[[1, 0, 5, 4], [1, 0, 4, 5], [1, 5, 0, 4], [1, 5, 4, 0], [1, 4, 5, 0], [1, 4, 0, 5]]
+[0, 1, 5, 4]
+[[0, 1, 5, 4], [0, 1, 4, 5], [5, 1, 0, 4], [5, 1, 4, 0], [4, 1, 5, 0], [4, 1, 0, 5]]
+[5, 0, 1, 4]
+[[5, 0, 1, 4], [5, 4, 1, 0], [0, 5, 1, 4], [0, 4, 1, 5], [4, 0, 1, 5], [4, 5, 1, 0]]
+[4, 0, 5, 1]
+[[4, 0, 5, 1], [4, 5, 0, 1], [0, 4, 5, 1], [0, 5, 4, 1], [5, 0, 4, 1], [5, 4, 0, 1]]
 
 [Program finished]
-PyDroid on a Galaxy Note 20 5G
 """
