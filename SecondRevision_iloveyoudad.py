@@ -68,7 +68,9 @@ def charles(L):
 				while count > 0:
 					if count != l[1]:
 						print("To the {} position".format(count))
+						print("And then for the permutation of three to be completed ...")
 					count -= 1
+# Thank you Ana Bell, Eric Grimson and John Guttag from MIT for teaching me in 6.001x and 6.002x
 #				while count < len(L) - 1 and count != l[1]:
 #					print("To the {} position".format(count))
 #					count += 1
