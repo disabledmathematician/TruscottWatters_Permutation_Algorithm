@@ -60,16 +60,24 @@ def charles(L):
 		lists.append((L.copy(), x))
 		print(L)
 		L[n], L[x] = L[x], L[n]
+	tries = []
 	for l in lists:
 		for e in subsequent_elems:
+			print(l, e)
 			if e[1] != l[1]:
 				print("Element {}, which is {}, needs to be swapped in {}".format(e[1], e[0], l[0]))
 				count = len(L) - 1
 				while count > 0:
-					if count != l[1]:
-						print("To the {} position".format(count))
-						print("And then for the permutation of three to be completed ...")
+					if count != l[1] and e[1] != l[1]:
+						l[0][e[1]], l[0][count] = l[0][count], l[0][e[1]]
+						print(l[0])
+#						tries.append(L.copy())
+						l[0][count], l[0][e[1]] = l[0][e[1]], l[0][count]
+#						print("To the {} position".format(count))
+#						print("And then for the permutation of three to be completed ...")
 					count -= 1
+				count = 0
+#	print(tries)
 # Thank you Ana Bell, Eric Grimson and John Guttag from MIT for teaching me in 6.001x and 6.002x
 #				while count < len(L) - 1 and count != l[1]:
 #					print("To the {} position".format(count))
